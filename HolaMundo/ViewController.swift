@@ -19,7 +19,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //Joan
+    @IBOutlet weak var TextoSaludo: UILabel!
 
-
+    @IBOutlet weak var inText: UITextField!
+    
+    @IBAction func BotonTocar(sender: AnyObject) {
+                TextoSaludo.text = String(format:"Hola %@, Bienvenido :)",inText.text! )
+        //
+        self.view.endEditing(true)
+    }
+    
 }
 
